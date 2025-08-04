@@ -72,5 +72,24 @@ public class MyMain {
 
         System.out.println("Are you married: " + isMarried);
 
+        int number = 10;
+
+        number += 1;
+        number /= 5;
+
+        System.out.println(10/5);
+        System.out.println(29-30);
+        System.out.println(8*8);
+        System.out.println(10%5);
+
+        int days = 300;
+
+        System.out.println("Если остаток 0 - четное, если остаток 1 - нечетное: " + (days % 2));
+
+        byte byteVal = -100;
+        int valInt = byteVal;
+
+        System.out.println(valInt);
+
     }
 }
