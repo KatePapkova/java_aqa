@@ -1,4 +1,4 @@
-package lesson4.massive;
+package lesson4.onedimensional.arrays;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -25,6 +25,7 @@ public class Homework {
         System.out.println();
         task1 ();
         task2 ();
+        task3 ();
 
     }
     public static void task1 () {
@@ -97,6 +98,49 @@ public class Homework {
         System.out.println("Максимальное значение: " + max);
         System.out.println("Минимальное значение: " + min);
         System.out.println("Среднее значение: " + average);
+    }
+    public static void task3 () {
+        int[] array1 = {10, 20, 30, 40, 50};
+        int[] array2 = {15, 25, 35, 45, 55};
+
+        // Вывод первого массива
+        System.out.print("Массив 1: ");
+        for (int num : array1) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        // Вывод второго массива
+        System.out.print("Массив 2: ");
+        for (int num : array2) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        // Вычисление среднего арифметического
+        double avg1 = calculateAverage(array1);
+        double avg2 = calculateAverage(array2);
+
+        // Вывод среднего
+        System.out.println("Среднее массива 1: " + avg1);
+        System.out.println("Среднее массива 2: " + avg2);
+
+        // Сравнение
+        if (avg1 > avg2) {
+            System.out.println("Среднее значение массива 1 больше.");
+        } else if (avg2 > avg1) {
+            System.out.println("Среднее значение массива 2 больше.");
+        } else {
+            System.out.println("Средние значения равны.");
+        }
+    }
+
+    public static double calculateAverage(int[] array) {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return (double) sum / array.length;
     }
 }
 
